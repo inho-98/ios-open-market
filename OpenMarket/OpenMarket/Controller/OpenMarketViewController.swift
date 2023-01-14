@@ -161,7 +161,7 @@ final class OpenMarketViewController: UIViewController {
         var snapshot = NSDiffableDataSourceSnapshot<Section, ProductData>()
         snapshot.appendSections([.main])
         snapshot.appendItems(products)
-        dataSource.apply(snapshot, animatingDifferences: false)
+        dataSource.apply(snapshot)
     }
     
     private func createListCellRegistration() -> UICollectionView.CellRegistration<ListCell, ProductData> {
